@@ -153,6 +153,28 @@ body {
   line-height: 1.75;
 }
 
+.how-to-shop {
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.how-to-shop h2 {
+  margin-top: 0;
+}
+
+.how-to-shop ol {
+  margin: 0;
+  padding-left: 1.35rem;
+  color: var(--text);
+}
+
+.how-to-shop li {
+  margin-bottom: 0.9rem;
+}
+
 .product-page {
   display: grid;
   gap: 2rem;
