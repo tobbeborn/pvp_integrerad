@@ -18,53 +18,167 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container product-page">
     <section class="page-intro">
       <h1>Våra plagg</h1>
-      <p>Filtrera enkelt mellan kepsar, T-shirts, byxor, skor och hoodies för att hitta det som passar dig bäst.</p>
+      <p>Filtrera på kategori, storlek, material och färg. Lägg till i varukorgen och välj leverans och betalning innan du går vidare.</p>
     </section>
 
-    <section class="filter-section">
-      <button class="filter-button active" data-filter="all">Alla</button>
-      <button class="filter-button" data-filter="kepsar">Kepsar</button>
-      <button class="filter-button" data-filter="tshirt">T-shirts</button>
-      <button class="filter-button" data-filter="byxor">Byxor</button>
-      <button class="filter-button" data-filter="skor">Skor</button>
-      <button class="filter-button" data-filter="hoodies">Hoodies</button>
+    <section class="product-tools">
+      <div class="filters-panel">
+        <div class="filter-group">
+          <h2>Sortera efter</h2>
+          <div class="filter-section">
+            <button class="filter-button active" data-filter="all">Alla</button>
+            <button class="filter-button" data-filter="kepsar">Kepsar</button>
+            <button class="filter-button" data-filter="tshirt">T-shirts</button>
+            <button class="filter-button" data-filter="byxor">Byxor</button>
+            <button class="filter-button" data-filter="skor">Skor</button>
+            <button class="filter-button" data-filter="hoodies">Hoodies</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h2>Storlek</h2>
+          <select id="filter-size">
+            <option value="all">Alla storlekar</option>
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="one-size">One size</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <h2>Material</h2>
+          <select id="filter-material">
+            <option value="all">Alla material</option>
+            <option value="bomull">Bomull</option>
+            <option value="fleece">Fleece</option>
+            <option value="denim">Denim</option>
+            <option value="syntet">Syntet</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <h2>Färg</h2>
+          <select id="filter-color">
+            <option value="all">Alla färger</option>
+            <option value="svart">Svart</option>
+            <option value="vit">Vit</option>
+            <option value="grå">Grå</option>
+            <option value="blå">Blå</option>
+          </select>
+        </div>
+      </div>
+
+      <aside class="cart-panel">
+        <h2>Varukorg</h2>
+        <div id="cart-items" class="cart-items">
+          <p class="cart-empty">Din varukorg är tom.</p>
+        </div>
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Produktbelopp</span>
+            <strong id="cart-subtotal">0 kr</strong>
+          </div>
+          <div class="summary-row">
+            <span>Frakt</span>
+            <strong id="shipping-cost">0 kr</strong>
+          </div>
+          <div class="summary-row total-row">
+            <span>Totalsumma</span>
+            <strong id="cart-total">0 kr</strong>
+          </div>
+        </div>
+        <div class="shipping-block">
+          <label for="shipping-method">Leverans</label>
+          <select id="shipping-method">
+            <option value="postnord">PostNord – 49 kr</option>
+            <option value="earlybird">Earlybird – 79 kr</option>
+            <option value="dhl">DHL – 59 kr</option>
+          </select>
+        </div>
+        <div class="payment-block">
+          <p>Betalning: Klarna, Swish eller bankkort.</p>
+          <p>Fri frakt från 599 kr.</p>
+        </div>
+      </aside>
     </section>
 
     <section id="catalog" class="product-grid">
-      <article class="product-card" data-category="kepsar">
+      <article class="product-card" data-category="kepsar" data-size="one-size" data-material="bomull" data-color="svart" data-price="199">
         <h3>Svart keps</h3>
-        <p>Elegant och bekväm keps för alla tillfällen.</p>
+        <p>Elegant och bekväm keps i bomull.</p>
+        <div class="product-meta">One size · Bomull · Svart</div>
+        <div class="product-actions">
+          <span class="price">199 kr</span>
+          <button class="add-button">Lägg i varukorgen</button>
+        </div>
       </article>
-      <article class="product-card" data-category="tshirt">
+      <article class="product-card" data-category="tshirt" data-size="m" data-material="bomull" data-color="vit" data-price="249">
         <h3>Vit T-shirt</h3>
         <p>Mjuk T-shirt i bomull med avslappnad passform.</p>
+        <div class="product-meta">Storlek M · Bomull · Vit</div>
+        <div class="product-actions">
+          <span class="price">249 kr</span>
+          <button class="add-button">Lägg i varukorgen</button>
+        </div>
       </article>
-      <article class="product-card" data-category="byxor">
+      <article class="product-card" data-category="byxor" data-size="l" data-material="denim" data-color="blå" data-price="699">
         <h3>Jeans</h3>
-        <p>Stilrena byxor som passar både vardag och fest.</p>
+        <p>Stilrena denimbyxor för vardag och fest.</p>
+        <div class="product-meta">Storlek L · Denim · Blå</div>
+        <div class="product-actions">
+          <span class="price">699 kr</span>
+          <button class="add-button">Lägg i varukorgen</button>
+        </div>
       </article>
-      <article class="product-card" data-category="skor">
+      <article class="product-card" data-category="skor" data-size="40" data-material="syntet" data-color="vit" data-price="799">
         <h3>Sportskor</h3>
-        <p>Lätta skor med gott grepp och snygg design.</p>
+        <p>Lätta skor med bra grepp och modern look.</p>
+        <div class="product-meta">Storlek 40 · Syntet · Vit</div>
+        <div class="product-actions">
+          <span class="price">799 kr</span>
+          <button class="add-button">Lägg i varukorgen</button>
+        </div>
       </article>
-      <article class="product-card" data-category="hoodies">
+      <article class="product-card" data-category="hoodies" data-size="m" data-material="fleece" data-color="grå" data-price="499">
         <h3>Grå hoodie</h3>
         <p>Skön hoodie med mjuk insida och rymlig huva.</p>
+        <div class="product-meta">Storlek M · Fleece · Grå</div>
+        <div class="product-actions">
+          <span class="price">499 kr</span>
+          <button class="add-button">Lägg i varukorgen</button>
+        </div>
       </article>
-      <article class="product-card" data-category="tshirt">
+      <article class="product-card" data-category="tshirt" data-size="s" data-material="bomull" data-color="svart" data-price="249">
         <h3>Svart T-shirt</h3>
         <p>Klassisk T-shirt med rak passform.</p>
+        <div class="product-meta">Storlek S · Bomull · Svart</div>
+        <div class="product-actions">
+          <span class="price">249 kr</span>
+          <button class="add-button">Lägg i varukorgen</button>
+        </div>
       </article>
-      <article class="product-card" data-category="kepsar">
+      <article class="product-card" data-category="kepsar" data-size="one-size" data-material="bomull" data-color="blå" data-price="199">
         <h3>Blå keps</h3>
         <p>Färgmatchande keps med justerbart spänne.</p>
+        <div class="product-meta">One size · Bomull · Blå</div>
+        <div class="product-actions">
+          <span class="price">199 kr</span>
+          <button class="add-button">Lägg i varukorgen</button>
+        </div>
       </article>
-      <article class="product-card" data-category="hoodies">
+      <article class="product-card" data-category="hoodies" data-size="l" data-material="fleece" data-color="svart" data-price="559">
         <h3>Hoodie med dragkedja</h3>
-        <p>Alltid funktionell hoodie med fickor fram.</p>
+        <p>Funktionell hoodie med fickor och dragkedja.</p>
+        <div class="product-meta">Storlek L · Fleece · Svart</div>
+        <div class="product-actions">
+          <span class="price">559 kr</span>
+          <button class="add-button">Lägg i varukorgen</button>
+        </div>
       </article>
     </section>
   </main>
