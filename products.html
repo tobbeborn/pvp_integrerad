@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PVP - Plagg</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">PVP</a>
+      <nav class="site-nav">
+        <a href="index.html">Hem</a>
+        <a href="products.html">Plagg</a>
+        <a href="#catalog">Produkter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Våra plagg</h1>
+      <p>Filtrera enkelt mellan kepsar, T-shirts, byxor, skor och hoodies för att hitta det som passar dig bäst.</p>
+    </section>
+
+    <section class="filter-section">
+      <button class="filter-button active" data-filter="all">Alla</button>
+      <button class="filter-button" data-filter="kepsar">Kepsar</button>
+      <button class="filter-button" data-filter="tshirt">T-shirts</button>
+      <button class="filter-button" data-filter="byxor">Byxor</button>
+      <button class="filter-button" data-filter="skor">Skor</button>
+      <button class="filter-button" data-filter="hoodies">Hoodies</button>
+    </section>
+
+    <section id="catalog" class="product-grid">
+      <article class="product-card" data-category="kepsar">
+        <h3>Svart keps</h3>
+        <p>Elegant och bekväm keps för alla tillfällen.</p>
+      </article>
+      <article class="product-card" data-category="tshirt">
+        <h3>Vit T-shirt</h3>
+        <p>Mjuk T-shirt i bomull med avslappnad passform.</p>
+      </article>
+      <article class="product-card" data-category="byxor">
+        <h3>Jeans</h3>
+        <p>Stilrena byxor som passar både vardag och fest.</p>
+      </article>
+      <article class="product-card" data-category="skor">
+        <h3>Sportskor</h3>
+        <p>Lätta skor med gott grepp och snygg design.</p>
+      </article>
+      <article class="product-card" data-category="hoodies">
+        <h3>Grå hoodie</h3>
+        <p>Skön hoodie med mjuk insida och rymlig huva.</p>
+      </article>
+      <article class="product-card" data-category="tshirt">
+        <h3>Svart T-shirt</h3>
+        <p>Klassisk T-shirt med rak passform.</p>
+      </article>
+      <article class="product-card" data-category="kepsar">
+        <h3>Blå keps</h3>
+        <p>Färgmatchande keps med justerbart spänne.</p>
+      </article>
+      <article class="product-card" data-category="hoodies">
+        <h3>Hoodie med dragkedja</h3>
+        <p>Alltid funktionell hoodie med fickor fram.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 PVP. Alla rättigheter förbehållna.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
